@@ -1,0 +1,212 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap');
+
+/* ----------------------------------------------- Body Styling */
+
+html, body {
+    height: 100%; /* required for sticky footer*/
+  }
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    /* required for sticky footer */
+    display: flex; 
+    flex-direction: column;
+}
+
+.content {
+    /* required for sticky footer */
+    flex: 1 0 auto;
+  }
+
+/* ----------------------------------------------- All Page Styling */
+
+.headings {
+    text-align: center;
+    padding: 15px;
+}
+
+/* ----------------------------------------------- Navigation Styling */
+.navbar-brand {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+}
+
+.nav-div {
+    width: 100vw;
+    text-align: center;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link:hover {
+    color: #1D5D4C;
+}
+
+/* Code for Nav Underline Hover from https://www.30secondsofcode.org/css/s/hover-underline-animation */
+
+.nav-item {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .nav-item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #1D5D4C;
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .nav-item:hover:after {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+/* ----------------------------------------------- Homepage Styling */
+
+.homepage {
+    position: relative;
+}
+
+.homepage-img {
+    width: 100%;
+}
+
+.welcome {
+    background-color: rgba(255, 255, 255, 0.489);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    padding-top: 15%;
+    text-align: center;
+}
+
+.welcome p {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+/* ----------------------------------------------- Carousel Styling */
+
+.carousel-style {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.carousel-imgs {
+    height: 350px;
+    object-fit: cover;
+}
+
+.carousel {
+    background: #2aa571;
+    margin-bottom: 30px;
+}
+
+.carousel-caption {
+    color: black;
+    background: #ffffff8d;
+    border-radius: 15px;
+}
+
+/* Hover Animation from https://css-tricks.com/css-link-hover-effects/ */
+
+.carousel-header {
+    background-image: linear-gradient(
+      to right,
+      #2aa571,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .carousel-header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .carousel-header:hover {
+   background-position: 0;
+  }
+  
+  .carousel-header:hover::before {
+    width:100%;
+  }
+
+ .carousel-header h4,
+ .carousel-caption p {
+    font-weight: 550;
+  }
+
+
+/* ----------------------------------------------- Footer Styling */
+
+.footer {
+    background-color: #1D5D4C;
+    padding: 3%;
+    flex-shrink: 0; /* required for sticky footer*/
+    display: flex;
+}
+
+.socials {
+    width: 28%;
+}
+
+.footer a {
+    text-decoration: none;
+    /* float: left; */
+}
+
+.footer-icons {
+    color: white;
+    font-size: x-large;
+    padding-right: 10px;
+}
+
+.footer-icons:hover {
+    color: rgb(29, 26, 21);
+}
+
+#mc_embed_signup {
+    background-color: #1D5D4C;
+    color: #fff;
+    width: 500px;
+}
+
+.copyright {
+    flex-grow: 1;
+}
+
+.copyright-icon {
+    color: white;
+    padding-right: 10px;
+}
+
+.copyright-p {
+    float: right;
+    color: white;
+}
