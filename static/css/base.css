@@ -166,7 +166,8 @@ body {
 /* ----------------------------------------------- Footer Styling */
 
 .footer {
-    background-color: #1D5D4C;
+    /* background-color: #1D5D4C; */
+    background-image: linear-gradient(#48E8BD, #1D5D4C);
     padding: 3%;
     flex-shrink: 0; /* required for sticky footer*/
     display: flex;
@@ -199,7 +200,7 @@ body {
 
 .copyright {
     flex-grow: 1;
-}
+} 
 
 .copyright-icon {
     color: white;
