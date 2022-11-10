@@ -28,7 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-samanthaboo-londonescap-9pj8is1yg8u.ws-eu75.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-samanthaboo-londonescap-9pj8is1yg8u.ws-eu74.gitpod.io']
 
 
 # Application definition
@@ -67,7 +68,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by AllAuth
+                'django.template.context_processors.request',  # required by AllAuth
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
