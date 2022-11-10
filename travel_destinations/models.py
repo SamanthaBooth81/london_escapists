@@ -1,6 +1,8 @@
 """Travel destinations models"""
 from django.db import models
 
+STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class TravelDestinations(models.Model):
     """Blog posts for travel destination visited"""
