@@ -18,3 +18,6 @@ class TravelDestinations(models.Model):
     additional_info = models.TextField(max_length=500, blank=True)
     additional_image = models.ImageField(null=True, blank=True)
     top_destination = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.destination
