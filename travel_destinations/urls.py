@@ -4,6 +4,6 @@ from . import views
 
 
 urlpatterns = [
-    path("all-destinations/", views.ViewAllDestinations.as_view(),
+    path("all-destinations/", views.AllDestinations.as_view(),
          name="destinations"),
 ]

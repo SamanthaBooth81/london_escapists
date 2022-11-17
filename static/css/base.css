@@ -211,3 +211,8 @@ body {
     float: right;
     color: white;
 }
+
+.destinations-container {
+    background-color: #1D5D4C0;
+    height: 100%;
+}
