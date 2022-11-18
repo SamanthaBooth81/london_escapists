@@ -18,6 +18,13 @@ class TravelDestinations(models.Model):
     additional_info = models.TextField(max_length=500, blank=True)
     additional_image = models.ImageField(null=True, blank=True)
     top_destination = models.BooleanField(default=False)
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        """Orders posts by date created using descending order"""
+        ordering = ['-created_on']
+        """Removes extra 's' from Model name"""
+        verbose_name_plural = 'Travel Destinations'
 
     def __str__(self):
         return self.destination
