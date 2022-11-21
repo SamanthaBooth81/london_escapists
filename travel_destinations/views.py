@@ -1,13 +1,15 @@
 """Travel Destinations Views"""
-# from django.shortcuts import render
-from django.views import generic
+from django.shortcuts import render
 from .models import TravelDestinations
 
 
-class DestinationsList(generic.ListView):
+def all_destinations(request):
     """View to display all destinations in the TravelDestinations Model"""
-    destinations = TravelDestinations.objects.all()
-    queryset = TravelDestinations.objects.filter(
+    destinations_list = TravelDestinations.objects.filter(
         status=1).order_by('-created_on')
-    template_name = 'all_destinations.html'
+    template = 'all_destinations.html'
     paginate_by = 12
+    context = {
+        'destinations_list': destinations_list,
+    }
+    return render(request, template, context)
