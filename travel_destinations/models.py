@@ -8,6 +8,8 @@ class TravelDestinations(models.Model):
     """Blog posts for travel destination visited"""
     destination_image = models.ImageField(null=True, blank=True)
     destination = models.CharField(max_length=50, null=False, blank=False)
+    destination_subheading = models.CharField(
+        max_length=150, null=False, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     intro = models.TextField(max_length=500, blank=True)

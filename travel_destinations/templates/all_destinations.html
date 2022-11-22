@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}All Destinations{% endblock %}
+
+<!-- Additional CSS -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'travel_destinations/css/destinations.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <div class="container destinations-container">
@@ -9,14 +15,27 @@
     </div>
     <div class="row">
     {% for destinations in destinations_list %}
-        <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                <h5 class="card-title">Location: {{ destinations.destination }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Created on: {{ destinations.created_on }}</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-                </div>
+        <div class="card destination-card">
+            {% if destinations.destination_image %}
+            <div class="card-body">
+                <a href="#">
+                    <img class="img-fluid item-img" src="{{ destinations.destination_image.url }}">
+                </a>
+                <a href="#" class="destination-header">
+                    <h5 class="card-title">{{ destinations.destination }}</h5>
+                </a>
+                <h6 class="card-subtitle mb-2 text-muted">Added {{ destinations.created_on }}</h6>
+                <p class="card-text">{{ destinations.destination_subheading }}</p>
+            </div>
+            {% else %}
+            <div class="card-body">
+                <a href="#" destination-header>
+                    <h5 class="card-title">{{ destinations.destination }}</h5>
+                </a>
+                <h6 class="card-subtitle mb-2 text-muted">Added {{ destinations.created_on }}</h6>
+                <p class="card-text">{{ destinations.destination_subheading }}</p>
+            </div>
+            {% endif %}
         </div>
     {% empty %}
     <div>

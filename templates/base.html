@@ -4,14 +4,23 @@
 <html lang="en">
 
 <head>
+    {% block meta %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+
+    <!-- Core CSS Links, -->
+    {% block corecss %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/base.css">
     <script src="https://kit.fontawesome.com/5f5081d5be.js" crossorigin="anonymous"></script>
-    <title>Paddy and Sammie's Adventures</title>
+    {% endblock %}
+
+    <!-- Extra CSS Block, required for all CSS not contained within the root static folder -->
+    {% block extra_css %}
+    {% endblock %}
 </head>
 
 <body>
@@ -96,7 +105,8 @@
                                                     src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a>
                                         </p>
                                     </div>
-                                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                                    <div class="indicates-required"><span class="asterisk">*</span> indicates required
+                                    </div>
 
                                 </div>
                             </div>
@@ -112,7 +122,7 @@
             </div>
         </footer>
     </div>
-        <!-- Bootstrap Javascript CDN -->
+    <!-- Bootstrap Javascript CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
     </script>
