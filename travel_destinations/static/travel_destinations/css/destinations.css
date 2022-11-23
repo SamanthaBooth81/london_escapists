@@ -1,17 +1,62 @@
+/* ---------------------------------------------------------- Destination Pages Header */
+.destination-page-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* ---------------------------------------------------------- Destination Cards */
 .card {
     padding: 0;
     width: 18rem;
     margin: 10px;
+    float: right;
 }
 
 .card-img {
     padding: 0;
     margin: 0;
-    object-fit: cover;
-    opacity: 0.6; /* creates an overlay style over image */
+    object-fit: fill;
+    max-height: 190px;
 }
 
 .card-img:hover {
-    opacity: none;
+    opacity: 0.6;
 }
+
+.card-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-link {
+    text-decoration: none;
+}
+
+.card-title {
+    color: black;
+    font-weight: bold;
+    transition: transform .2s; /* Animation */
+}
+
+.card-title:hover {
+    color: aquamarine;
+    transform: scale(1.2);
+}
+
+/* below code from https://stackdiary.com/gradient-hover-effect-css/ */
+.post-btn {
+    display: flex;
+    padding: 0.875em 2em;
+    background: linear-gradient(90deg, #3f51b5, transparent) #21f3e9;
+    color: #fff;
+    transition: background-color 1s;
+    place-content: center;
+    font-weight: bold;
+}
+
+.post-btn:hover, .post-btn:focus {
+background-color: #e91e63;
+color: #fff;
+}
+/* above code from https://stackdiary.com/gradient-hover-effect-css/ */

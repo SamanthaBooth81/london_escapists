@@ -11,25 +11,34 @@
 
 <div class="container destinations-container">
     <div>
-        <h1>Travel Destinations</h1>
+        <h1 class="destination-page-header">Travel Destinations</h1>
     </div>
     <div class="row">
         {% for destinations in destinations_list %}
-        <div class="card" style="width: 18rem;">
+        <div class="card">
             {% if destinations.destination_image %}
-            <img src="{{ destinations.destination_image.url }}" class="card-img-top" alt="{{ destinations.destination }">
+            <a href="#">
+                <img src="{{ destinations.destination_image.url }}" class="card-img-top card-img" alt="{{ destinations.destination }}">
+            </a>
             <div class="card-body">
-              <h5 class="card-title">{{ destinations.destination }}</h5>
+                <a href="#" class="destination-link">
+                    <h5 class="card-title">{{ destinations.destination }}</h5>
+                </a>
               <p class="card-text">{{ destinations.destination_subheading }}</p>
               <p class="card-text"><small>{{ destinations.created_on }}</small></p>
-              <a href="#" class="btn btn-primary">View Post</a>
+              <a href="#" class="btn btn-primary post-btn mt-auto">View Post</a>
             </div>
             {% else %}
+            <a href="#">
+                <img src="/media/card-placeholder.png" class="card-img-top card-img" alt="Placeholder image">
+            </a>
             <div class="card-body">
-                <h5 class="card-title">{{ destinations.destination }}</h5>
-                <p class="card-text">{{ destinations.destination_subheading }}</p>
-                <p class="card-text"><small>{{ destinations.created_on }}</small></p>
-                <a href="#" class="btn btn-primary">View Post</a>
+                <a href="#" class="destination-link">
+                    <h5 class="card-title">{{ destinations.destination }}</h5>
+                </a>
+              <p class="card-text">{{ destinations.destination_subheading }}</p>
+              <p class="card-text"><small>{{ destinations.created_on }}</small></p>
+              <a href="#" class="btn btn-primary post-btn mt-auto">View Post</a>
             </div>
             {% endif %}
           </div>
