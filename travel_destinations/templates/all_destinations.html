@@ -11,7 +11,7 @@
 
 <div class="container destinations-container">
     <div>
-        <h1 class="destination-page-header">Travel Destinations</h1>
+        <h1 class="headings destination-page-header">Travel Destinations</h1>
     </div>
     <div class="row">
         {% for destinations in destinations_list %}
@@ -24,9 +24,9 @@
                 <a href="#" class="destination-link">
                     <h5 class="card-title">{{ destinations.destination }}</h5>
                 </a>
-              <p class="card-text">{{ destinations.destination_subheading }}</p>
-              <p class="card-text"><small>{{ destinations.created_on }}</small></p>
-              <a href="#" class="btn btn-primary post-btn mt-auto">View Post</a>
+                <p class="card-text">{{ destinations.destination_subheading }}</p>
+                <p class="card-text"><small>{{ destinations.created_on }}</small></p>
+                <a href="#" class="btn btn-primary post-btn mt-auto">View Post</a>
             </div>
             {% else %}
             <a href="#">
@@ -36,9 +36,9 @@
                 <a href="#" class="destination-link">
                     <h5 class="card-title">{{ destinations.destination }}</h5>
                 </a>
-              <p class="card-text">{{ destinations.destination_subheading }}</p>
-              <p class="card-text"><small>{{ destinations.created_on }}</small></p>
-              <a href="#" class="btn btn-primary post-btn mt-auto">View Post</a>
+                <p class="card-text">{{ destinations.destination_subheading }}</p>
+                <p class="card-text"><small>{{ destinations.created_on }}</small></p>
+                <a href="#" class="btn btn-primary post-btn mt-auto">View Post</a>
             </div>
             {% endif %}
           </div>
