@@ -1,9 +1,17 @@
-.destination-card {
+/* ---------------------------------------------------------- Destination Cards */
+.card {
+    padding: 0;
     width: 18rem;
     margin: 10px;
 }
 
-.destination-header {
-    text-decoration: none;
-    color: black;
+.card-img {
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    opacity: 0.6; /* creates an overlay style over image */
+}
+
+.card-img:hover {
+    opacity: none;
 }

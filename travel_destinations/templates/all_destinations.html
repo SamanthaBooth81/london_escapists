@@ -14,34 +14,30 @@
         <h1>Travel Destinations</h1>
     </div>
     <div class="row">
-    {% for destinations in destinations_list %}
-        <div class="card destination-card">
+        {% for destinations in destinations_list %}
+        <div class="card" style="width: 18rem;">
             {% if destinations.destination_image %}
+            <img src="{{ destinations.destination_image.url }}" class="card-img-top" alt="{{ destinations.destination }">
             <div class="card-body">
-                <a href="#">
-                    <img class="img-fluid item-img" src="{{ destinations.destination_image.url }}">
-                </a>
-                <a href="#" class="destination-header">
-                    <h5 class="card-title">{{ destinations.destination }}</h5>
-                </a>
-                <h6 class="card-subtitle mb-2 text-muted">Added {{ destinations.created_on }}</h6>
-                <p class="card-text">{{ destinations.destination_subheading }}</p>
+              <h5 class="card-title">{{ destinations.destination }}</h5>
+              <p class="card-text">{{ destinations.destination_subheading }}</p>
+              <p class="card-text"><small>{{ destinations.created_on }}</small></p>
+              <a href="#" class="btn btn-primary">View Post</a>
             </div>
             {% else %}
             <div class="card-body">
-                <a href="#" destination-header>
-                    <h5 class="card-title">{{ destinations.destination }}</h5>
-                </a>
-                <h6 class="card-subtitle mb-2 text-muted">Added {{ destinations.created_on }}</h6>
+                <h5 class="card-title">{{ destinations.destination }}</h5>
                 <p class="card-text">{{ destinations.destination_subheading }}</p>
+                <p class="card-text"><small>{{ destinations.created_on }}</small></p>
+                <a href="#" class="btn btn-primary">View Post</a>
             </div>
             {% endif %}
+          </div>
+        {% empty %}
+        <div>
+            <p>No Destinations to display</p>
         </div>
-    {% empty %}
-    <div>
-        <p>No Destinations to display</p>
-    </div>
-    {% endfor %}
+        {% endfor %}
     </div>
     <!-- Site Pagination, maximum 12 recipes per page. From Code Institute Codestar Follow Along Project -->
     <div>
