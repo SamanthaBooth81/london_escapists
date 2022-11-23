@@ -166,15 +166,21 @@ body {
 #mc_embed_signup {
     width: 500px;
     margin: 0 auto;
+    color: white;
 }
 
 .mailchimp-form-block {
     width: 100%;
     background-color: #37A7ED;
-    padding: 10px 0 10px 0;
+    padding: 25px 0 25px 0;
     margin-bottom: 30px;
     border-top: #0a5c90 8px solid;
     border-bottom: #0a5c90 8px solid;
+}
+
+.signup-wave {
+    background-image: url('/media/signup-wave.png');
+    background-repeat: repeat;
 }
 
 #mc-header {
@@ -222,9 +228,4 @@ body {
 .copyright-p {
     float: right;
     color: white;
-}
-
-.destinations-container {
-    background-color: #1D5D4C0;
-    height: 100%;
 }
