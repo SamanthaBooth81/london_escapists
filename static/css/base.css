@@ -27,6 +27,9 @@ body {
 }
 
 /* ----------------------------------------------- Navigation Styling */
+.navbar-bg {
+    background-color: #74d7aea9;
+}
 .navbar-brand {
     font-family: 'Caveat', cursive;
     font-size: 36px;
