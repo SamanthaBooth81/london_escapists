@@ -177,12 +177,13 @@ body {
 }
 
 .mailchimp-form-block {
-    width: 100%;
-    background-color: #6abbed;
+    width: 60%;
+    background-color: #6aedc88a;
     padding: 25px 0 25px 0;
-    margin-bottom: 30px;
-    border-top: #0a5c90 8px solid;
-    border-bottom: #0a5c90 8px solid;
+    /* margin-bottom: 30px; */
+    margin: 0 auto;
+    margin-bottom: 100px;
+    border: #0a906a 2px solid;
 }
 
 .signup-wave {
