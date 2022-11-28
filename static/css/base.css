@@ -140,6 +140,7 @@ body {
     background-position: -100%;
     display: inline-block;
     position: relative;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
