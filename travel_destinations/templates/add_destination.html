@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Foody Family | Add Recipe{% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+{%load static%}
+
+<h1>Add Recipe</h1>
+
+<form method="post" id="add-recipe" class="add-recipe" action="" enctype="multipart/form-data">
+
+
+    {% csrf_token %}
+    {{ recipe_form | crispy }}
+  
+  
+    <button type="submit" value="Add Recipe" class="btn btn-dark all-btn">Post Recipe</button>
+  
+  </form>
+  
+
+  {% endblock %}

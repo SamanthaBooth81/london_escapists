@@ -6,4 +6,6 @@ from . import views
 urlpatterns = [
     path("all-destinations/", views.all_destinations,
          name="destinations"),
+    path("add-destinations/", views.add_destinations,
+         name="add_destinations"),
 ]
