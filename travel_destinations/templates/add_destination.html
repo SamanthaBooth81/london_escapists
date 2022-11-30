@@ -4,18 +4,21 @@
 {% load crispy_forms_tags %}
 {%load static%}
 
-<h1>Add Recipe</h1>
+<!-- Additional CSS -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'travel_destinations/css/destinations.css' %}">
+{% endblock %}
 
-<form method="post" id="add-recipe" class="add-recipe" action="" enctype="multipart/form-data">
+<h1 class="headings destination-page-header">Add Recipe</h1>
 
+<div class="container">
+    <form method="post" id="add-recipe" class="add-destination" action="" enctype="multipart/form-data">
 
-    {% csrf_token %}
-    {{ recipe_form | crispy }}
-  
-  
-    <button type="submit" value="Add Recipe" class="btn btn-dark all-btn">Post Recipe</button>
-  
-  </form>
-  
+      {% csrf_token %}
+      {{ destination_form | crispy }}
+      <button type="submit" value="Add Destination" class="btn btn-dark all-btn">Post Recipe</button>
+      
+    </form>
+</div>
 
   {% endblock %}

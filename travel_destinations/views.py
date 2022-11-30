@@ -1,5 +1,5 @@
 """Travel Destinations Views"""
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.utils.text import slugify
 from .models import TravelDestinations
 from .forms import AddDestinationForm
@@ -19,8 +19,12 @@ def all_destinations(request):
 
 def add_destinations(request):
     """View to add new destination"""
+    if not request.user.is_superuser:
+        # Redirect back to homepage if not a superuser
+        # messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     destination_form = AddDestinationForm()
-    if request.method == POST:
+    if request.method == 'POST':
         model = TravelDestinations()
         results = TravelDestinations.objects.filter(
             destination=request.POST.get('destination'))
