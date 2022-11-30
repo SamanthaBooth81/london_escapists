@@ -60,3 +60,27 @@ background-color: #e91e63;
 color: #fff;
 }
 /* above code from https://stackdiary.com/gradient-hover-effect-css/ */
+
+/* ---------------------------------------------------------- Add New Destination Form */
+.add-destination-form {
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+.add-destination-form label {
+    color: #37A7ED;
+    font-weight: bolder;
+    padding: 15px 0 15px 0;
+}
+
+#id_top_destination {
+    margin: 20px 10px 0 0;
+}
+
+.form-check {
+    padding-left: 0;
+}
+
+.add-destination-btn {
+    margin: 20px 0 20px 0;
+}

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Foody Family | Add Recipe{% endblock %}
+{% block title %}Add a New Destination{% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
 {%load static%}
@@ -9,14 +9,14 @@
 <link rel="stylesheet" href="{% static 'travel_destinations/css/destinations.css' %}">
 {% endblock %}
 
-<h1 class="headings destination-page-header">Add Recipe</h1>
+<h1 class="headings destination-page-header">Add a New Destination</h1>
 
-<div class="container">
+<div class="container add-destination-form">
     <form method="post" id="add-recipe" class="add-destination" action="" enctype="multipart/form-data">
 
       {% csrf_token %}
       {{ destination_form | crispy }}
-      <button type="submit" value="Add Destination" class="btn btn-dark all-btn">Post Recipe</button>
+      <button type="submit" value="Add Destination" class="btn btn-primary add-destination-btn">Post Recipe</button>
       
     </form>
 </div>
