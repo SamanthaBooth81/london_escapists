@@ -1,5 +1,5 @@
 """Travel Destinations Views"""
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.utils.text import slugify
 from .models import TravelDestinations
 from .forms import AddDestinationForm
@@ -10,11 +10,19 @@ def all_destinations(request):
     destinations_list = TravelDestinations.objects.filter(
         status=1).order_by('-created_on')
     template = 'all_destinations.html'
-    paginate_by = 12
+    # paginate_by = 12
     context = {
         'destinations_list': destinations_list,
     }
     return render(request, template, context)
+
+
+def destination_details(request, destination_id):
+    """View to see full destination details"""
+    destination_info = get_object_or_404(TravelDestinations, pk=destination_id)
+
+    return render(request, 'travel_destinations/destination_details.html',
+                  {'destination_info': destination_info, })
 
 
 def add_destinations(request):
@@ -41,7 +49,7 @@ def add_destinations(request):
                 destinations = destination_form.save(commit=False)
                 # # Post on Stack Overflow in README for appending array
                 # # to recipe model along with guidance from my mentor
-                # destinations.destinaion = request.POST.getlist('ingredients')
+                # destinations.destination = request.POST.getlist('ingredients')
                 # recipe.instructions = request.POST.getlist('instructions')
                 # recipe.author = request.user
                 # https://idlecoding.com/creating-custom-slugs-in-django/

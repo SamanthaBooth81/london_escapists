@@ -6,6 +6,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class TravelDestinations(models.Model):
     """Blog posts for travel destination visited"""
+    # destination_id = models.IntegerField(primary_key=True)
     destination_image = models.ImageField(null=True, blank=True)
     destination = models.CharField(max_length=50, null=False, blank=False)
     destination_subheading = models.CharField(
