@@ -8,6 +8,6 @@ urlpatterns = [
          name="destinations"),
     path("add-destinations/", views.add_destinations,
          name="add_destinations"),
-    path('<destination_id>/', views.destination_details,
-         name='destination_details'),
+    path('destination_details/',
+         views.destination_details, name='destination_details'),
 ]
