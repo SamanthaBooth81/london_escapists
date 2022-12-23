@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import TravelDestinations
+from .models import Destinations
 
 
-class TravelDestinationAdmin(admin.ModelAdmin):
+class DestinationAdmin(admin.ModelAdmin):
     """Admin Panel display for Product Model"""
     list_display = (
         'destination',
@@ -13,4 +13,4 @@ class TravelDestinationAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(TravelDestinations, TravelDestinationAdmin)
+admin.site.register(Destinations, DestinationAdmin)

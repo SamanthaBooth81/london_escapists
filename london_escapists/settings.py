@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-samanthaboo-londonescap-9pj8is1yg8u.ws-eu79.gitpod.io/'
+    'https://8000-samanthaboo-londonescap-9pj8is1yg8u.ws-eu80.gitpod.io/'
 ]
 
 

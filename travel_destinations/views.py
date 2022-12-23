@@ -1,13 +1,13 @@
 """Travel Destinations Views"""
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.utils.text import slugify
-from .models import TravelDestinations
+from .models import Destinations
 from .forms import AddDestinationForm
 
 
 def all_destinations(request):
-    """View to display all destinations in the TravelDestinations Model"""
-    destinations_list = TravelDestinations.objects.filter(
+    """View to display all destinations in the Destinations Model"""
+    destinations_list = Destinations.objects.filter(
         status=1).order_by('-created_on')
     template = 'all_destinations.html'
     # paginate_by = 12
@@ -17,9 +17,11 @@ def all_destinations(request):
     return render(request, template, context)
 
 
-def destination_details(request, TravelDestinations_id):
+def destination_details(request, destination_id):
     """View to see full destination details"""
-    destination_info = get_object_or_404(TravelDestinations, pk=TravelDestinations_id)
+    destination_info = get_object_or_404(Destinations, pk=destination_id)
+
+    destination_id = destination_info.id
 
     return render(request, 'travel_destinations/destination_details.html',
                   {'destination_info': destination_info, })
@@ -33,8 +35,8 @@ def add_destinations(request):
         return redirect(reverse('home'))
     destination_form = AddDestinationForm()
     if request.method == 'POST':
-        model = TravelDestinations()
-        results = TravelDestinations.objects.filter(
+        model = Destinations()
+        results = Destinations.objects.filter(
             destination=request.POST.get('destination'))
         destination_form = AddDestinationForm(request.POST, request.FILES)
 
