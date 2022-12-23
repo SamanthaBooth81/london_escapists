@@ -17,7 +17,7 @@
         {% for destinations in destinations_list %}
         <div class="card">
             {% if destinations.destination_image %}
-            <a href="{% url 'destination_details' destination_id %}">
+            <a href="{% url 'destination_details' destination.id %}">
                 <img src="{{ destinations.destination_image.url }}" class="card-img-top card-img" alt="{{ destinations.destination }}">
             </a>
             <div class="card-body">
