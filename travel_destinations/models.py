@@ -25,8 +25,8 @@ class Destinations(models.Model):
     class Meta:
         """Orders posts by date created using descending order"""
         ordering = ['-created_on']
-        # """Removes extra 's' from Model name"""
-        # verbose_name_plural = 'Travel Destinations'
+        """Removes extra 's' from Model name"""
+        verbose_name_plural = 'Travel Destinations'
 
     def __str__(self):
         return self.destination
