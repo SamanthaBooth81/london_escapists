@@ -21,6 +21,7 @@ class Destinations(models.Model):
     additional_image = models.ImageField(null=True, blank=True)
     top_destination = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)
+    slug = models.SlugField(max_length=200, unique=True)
 
     class Meta:
         """Orders posts by date created using descending order"""

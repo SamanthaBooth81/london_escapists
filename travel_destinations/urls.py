@@ -4,10 +4,9 @@ from . import views
 
 
 urlpatterns = [
-    path("all-destinations/", views.all_destinations,
+     path("all-destinations/", views.all_destinations,
          name="destinations"),
-    path("add-destinations/", views.add_destinations,
+     path("add-destinations/", views.add_destinations,
          name="add_destinations"),
-    path('<int:destination_id>/',
-         views.destination_details, name='destination_details'),
+     path("<slug:slug>/", views.DestinationDetail.as_view(), name="destination_details"),
 ]

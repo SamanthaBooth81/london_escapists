@@ -1,5 +1,6 @@
 """Travel Destinations Views"""
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.views import View
 from django.utils.text import slugify
 from .models import Destinations
 from .forms import AddDestinationForm
@@ -17,14 +18,30 @@ def all_destinations(request):
     return render(request, template, context)
 
 
-def destination_details(request, destination_id):
-    """View to see full destination details"""
-    destination_info = get_object_or_404(Destinations, pk=destination_id)
+# def destination_details(request, destination_id):
+#     """View to see full destination details"""
+#     destination_info = get_object_or_404(Destinations, pk=destination_id)
 
-    destination_id = destination_info.id
+#     destination_id = destination_info.id
 
-    return render(request, 'travel_destinations/destination_details.html',
-                  {'destination_info': destination_info, })
+#     return render(request, 'travel_destinations/destination_details.html',
+#                   {'destination_info': destination_info, })
+
+class DestinationDetail(View):
+    """View recipe details"""
+
+    def get(self, request, slug, *args, **kwargs):
+        """Function to get the recipe details"""
+        queryset = Destinations.objects.filter(status=1)
+        dest = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            "destination_details.html",
+            {
+                "dest": dest,
+            },
+        )
 
 
 def add_destinations(request):
