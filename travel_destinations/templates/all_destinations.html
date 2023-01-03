@@ -21,24 +21,24 @@
                 <img src="{{ destinations.destination_image.url }}" class="card-img-top card-img" alt="{{ destinations.destination }}">
             </a>
             <div class="card-body">
-                <a href="#" class="destination-link">
+                <a href="{% url 'destination_details' destinations.slug %}" class="destination-link">
                     <h5 class="card-title">{{ destinations.destination }}</h5>
                 </a>
                 <p class="card-text">{{ destinations.destination_subheading }}</p>
                 <p class="card-text"><small>{{ destinations.created_on }}</small></p>
-                <a href="" class="btn btn-primary post-btn mt-auto">View Post</a>
+                <a href="{% url 'destination_details' destinations.slug %}" class="btn btn-primary post-btn mt-auto">View Post</a>
             </div>
             {% else %}
-            <a href="#">
+            <a href="{% url 'destination_details' destinations.slug %}">
                 <img src="/media/card-placeholder.png" class="card-img-top card-img" alt="Placeholder image">
             </a>
             <div class="card-body">
-                <a href="#" class="destination-link">
+                <a href="{% url 'destination_details' destinations.slug %}" class="destination-link">
                     <h5 class="card-title">{{ destinations.destination }}</h5>
                 </a>
                 <p class="card-text">{{ destinations.destination_subheading }}</p>
                 <p class="card-text"><small>{{ destinations.created_on }}</small></p>
-                <a href="#" class="btn btn-primary post-btn mt-auto">View Post</a>
+                <a href="{% url 'destination_details' destinations.slug %}" class="btn btn-primary post-btn mt-auto">View Post</a>
             </div>
             {% endif %}
         </div>
