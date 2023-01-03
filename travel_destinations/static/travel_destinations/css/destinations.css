@@ -90,7 +90,7 @@ color: #fff;
 /* ---------------------------------------------------------- Destination Details Styling */
 
 .dest-img {
-    width: 80%; 
+    width: 95%; 
     height: 400px;
     object-fit: cover;
 }
