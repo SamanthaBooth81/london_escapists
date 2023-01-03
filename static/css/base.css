@@ -200,7 +200,7 @@ body {
 
 .footer {
     /* background-color: #1D5D4C; */
-    background-image: linear-gradient(#39F7A5, #37A7ED);
+    background-color:#74d7aea9;
     padding: 3%;
     flex-shrink: 0; /* required for sticky footer*/
     display: flex;
@@ -222,7 +222,7 @@ body {
 }
 
 .footer-icons:hover {
-    color: rgb(29, 26, 21);
+    color: #8A2428;
 }
 
 .copyright {

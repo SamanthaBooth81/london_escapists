@@ -9,7 +9,14 @@
 
 {% block content %}
 <div class="container">
-    <h1>Destination Description</h1>
-
+    <h1 class="headings destination-page-header">{{ dest.destination }}</h1>
+    <p class="dest-subheading">{{ dest.destination_subheading }}</p>
+    <div class="row">
+        <img src="{{ dest.destination_image.url }}" alt="destination image" class="img-center dest-img">
+        <p>{{ dest.intro }}</p>
+    </div>
+    <div>
+        <img src="/media/page-break.png" alt="Page Break Image" class="page-break img-center">
+    </div>
 </div>
 {% endblock %}
