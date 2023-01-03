@@ -106,6 +106,10 @@ color: #fff;
     margin-right: auto;
 }
 
+.dest-content {
+    text-align: center;
+}
+
 .page-break {
     width: 30%;
 }

@@ -9,14 +9,41 @@
 
 {% block content %}
 <div class="container">
+    <!-- Heading and subheading -->
     <h1 class="headings destination-page-header">{{ dest.destination }}</h1>
     <p class="dest-subheading">{{ dest.destination_subheading }}</p>
-    <div class="row">
+    <!-- Intro image and content -->
+    <div class="dest-content">
         <img src="{{ dest.destination_image.url }}" alt="destination image" class="img-center dest-img">
-        <p>{{ dest.intro }}</p>
+        <p class="dest-content mt-4">{{ dest.intro }}</p>
     </div>
+    <!-- Page break div to separate each section -->
+    <!-- <div>
+        <img src="/media/page-break.png" alt="Page Break Image" class="page-break img-center">
+    </div> -->
+
+    <!-- Things to do Section -->
+    <h2 class="headings destination-page-header">What to do</h2>
+    <div class="dest-content">
+        <img src="{{ dest.activity_image.url }}" alt="activities image" class="img-center dest-img">
+        <p class="dest-content mt-4">{{ dest.activities }}</p>
+    </div>
+    <!-- Page break div to separate each section -->
+    <!-- <div>
+        <img src="/media/page-break.png" alt="Page Break Image" class="page-break img-center">
+    </div> -->
+
+    <!-- What to Eat Section -->
+    <div class="dest-content">
+        <h2 class="headings destination-page-header">What to eat</h2>
+        <img src="{{ dest.food_image.url }}" alt="food image" class="img-center dest-img">
+        <p class="dest-content mt-4">{{ dest.food }}</p>
+    </div>
+    <!-- Page break div to separate each section -->
     <div>
         <img src="/media/page-break.png" alt="Page Break Image" class="page-break img-center">
     </div>
+
+    <!-- Additional Info Section -->
 </div>
 {% endblock %}
