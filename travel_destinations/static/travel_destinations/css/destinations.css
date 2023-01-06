@@ -48,7 +48,7 @@
 .post-btn {
     display: flex;
     padding: 0.875em 2em;
-    background: linear-gradient(90deg, #74d7aea9, transparent) #99FFD6;
+    background: #74d7aea9;
     color: #fff;
     transition: background-color 1s;
     place-content: center;

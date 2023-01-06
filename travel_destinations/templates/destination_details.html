@@ -15,26 +15,34 @@
 
     <!-- Intro image and content -->
     <div class="dest-content">
-        <img src="{{ dest.destination_image.url }}" alt="destination image" class="img-center dest-img">
+        {% if dest.destination_image %}
+            <img src="{{ dest.destination_image.url }}" alt="destination image" class="img-center dest-img">
+        {% endif %}
         <p class="dest-content mt-4">{{ dest.intro }}</p>
     </div>
 
     <!-- Things to do Section -->
     {% if dest.activities %}
-    <h2 class="headings destination-page-header">What to do</h2>
-    <div class="dest-content">
-        <img src="{{ dest.activity_image.url }}" alt="activities image" class="img-center dest-img">
-        <p class="dest-content mt-4">{{ dest.activities }}</p>
-    </div>
+        <h2 class="headings destination-page-header">What to do</h2>
+        <div class="dest-content">
+            <!-- Activities Image -->
+            {% if dest.activity_image %}
+                <img src="{{ dest.activity_image.url }}" alt="activities image" class="img-center dest-img">
+            {% endif %}
+            <p class="dest-content mt-4">{{ dest.activities }}</p>
+        </div>
     {% endif %}
 
     <!-- What to Eat Section -->
     {% if dest.food %}
-    <div class="dest-content">
-        <h2 class="headings destination-page-header">What to eat</h2>
-        <img src="{{ dest.food_image.url }}" alt="food image" class="img-center dest-img">
-        <p class="dest-content mt-4">{{ dest.food }}</p>
-    </div>
+        <div class="dest-content">
+            <h2 class="headings destination-page-header">What to eat</h2>
+            <!-- Food Image -->
+            {% if dest.food_image %}
+                <img src="{{ dest.food_image.url }}" alt="food image" class="img-center dest-img">
+            {% endif %}
+            <p class="dest-content mt-4">{{ dest.food }}</p>
+        </div>
     {% endif %}
 
     <!-- Additional Info Section -->
@@ -42,17 +50,19 @@
         <div class="dest-content">
             <h2 class="headings destination-page-header">Additional Info</h2>
             {% if dest.additional_image %}
-            <!-- article images -->
-            <img class="img-center dest-img" src="{{ dest.additional_image.url }}" alt="{{ post.title }}"/>
+                <!-- Additional images -->
+                <img class="img-center dest-img" src="{{ dest.additional_image.url }}" alt="{{ post.title }}"/>
             {% endif %}
             <p class="dest-content mt-4">{{ dest.additional_info }}</p>
         </div>
     {% endif %}
-  
-    <!-- Page break div to separate each section -->
+
+        <!-- Page break div to separate each section -->
     <div>
         <img src="/media/page-break.png" alt="Page Break Image" class="page-break img-center">
     </div>
+
+    <a class="post-btn mb-5" href="{% url 'destinations' %}">Back to All Destinations</a>
 
 </div>
 {% endblock %}
