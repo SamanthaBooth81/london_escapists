@@ -63,6 +63,11 @@ color: #fff;
 }
 /* above code from https://stackdiary.com/gradient-hover-effect-css/ */
 
+.back-btn {
+    width: 40%;
+    margin: 0 auto;
+}
+
 /* ---------------------------------------------------------- Add New Destination Form */
 .add-destination-form {
     width: 70%;
