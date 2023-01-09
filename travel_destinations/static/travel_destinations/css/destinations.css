@@ -4,6 +4,75 @@
     margin-bottom: 20px;
 }
 
+.sub-header {
+    text-align: center;
+}
+
+/* ----------------------------------------------- Carousel Styling */
+
+.carousel-style {
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.carousel-imgs {
+    height: 350px;
+    object-fit: cover;
+}
+
+.carousel {
+    background: #2aa57286;
+    margin-bottom: 30px;
+}
+
+.carousel-caption {
+    color: black;
+    background: #ffffff8d;
+    border-radius: 15px;
+}
+
+/* Hover Animation from https://css-tricks.com/css-link-hover-effects/ */
+
+.carousel-header {
+    background-image: linear-gradient(
+      to right,
+      #2aa571,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .carousel-header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .carousel-header:hover {
+   background-position: 0;
+  }
+  
+  .carousel-header:hover::before {
+    width:100%;
+  }
+
+ .carousel-header h4,
+ .carousel-caption p {
+    font-weight: 550;
+  }
+
 /* ---------------------------------------------------------- Destination Cards */
 .card {
     padding: 0;

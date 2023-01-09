@@ -13,7 +13,53 @@
     <div>
         <h1 class="headings destination-page-header">Travel Destinations</h1>
     </div>
+
+    <!-- Top 2 Destinations Carousel-->
+<div class="carousel-div">
+    <div>
+        <h4 class="mb-4 mt-4 sub-header">Our Favourite Destinations</h4>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-style" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner bg">
+            {% for destinations in destinations_list %}
+                {% if destinations.top_destination %}
+                    <div class="carousel-item active">
+                        {% if destinations.destination_image %}
+                        <img src="{{ destinations.destination_image.url }}" class="d-block w-100 carousel-imgs" alt="Top Destination">
+                        {% else %}
+                        <img src="/media/card-placeholder.png" class="card-img-top card-img" alt="Placeholder image">
+                        {% endif %}
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="#" class="carousel-header">
+                                <h4>{{ destinations.destination }}</h4>
+                            </a>
+                            <p>{{ destinations.destination_subheading }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
     <div class="row">
+        <h4 class="mb-4 mt-4 sub-header">All Destinations</h4>
         {% for destinations in destinations_list %}
         <div class="card destination-card mb-4">
             {% if destinations.destination_image %}
