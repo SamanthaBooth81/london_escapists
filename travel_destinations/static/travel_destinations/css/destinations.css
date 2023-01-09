@@ -100,6 +100,12 @@ color: #fff;
     object-fit: cover;
 }
 
+.description-icon {
+    display: flex;
+    justify-content: center;
+    color: #D66B6F;
+}
+
 .dest-subheading {
     font-style: italic;
     text-align: center;
@@ -112,9 +118,19 @@ color: #fff;
 }
 
 .dest-content {
-    text-align: center;
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .page-break {
     width: 30%;
+}
+
+/* ---------------------------------------------------------- Media Queries */
+
+@media screen and (max-width: 767px) {
+    .destination-card {
+        margin: 0 auto;
+    }
 }

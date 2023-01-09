@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         {% for destinations in destinations_list %}
-        <div class="card">
+        <div class="card destination-card mb-4">
             {% if destinations.destination_image %}
             <a href="{% url 'destination_details' destinations.slug %}">
                 <img src="{{ destinations.destination_image.url }}" class="card-img-top card-img" alt="{{ destinations.destination }}">
