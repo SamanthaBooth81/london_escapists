@@ -10,22 +10,15 @@ def all_destinations(request):
     """View to display all destinations in the Destinations Model"""
     destinations_list = Destinations.objects.filter(
         status=1).order_by('-created_on')
+    top_dest = Destinations.objects.filter(top_destination=True)
     template = 'all_destinations.html'
     # paginate_by = 12
     context = {
         'destinations_list': destinations_list,
+        'top_dest': top_dest,
     }
     return render(request, template, context)
 
-
-# def destination_details(request, destination_id):
-#     """View to see full destination details"""
-#     destination_info = get_object_or_404(Destinations, pk=destination_id)
-
-#     destination_id = destination_info.id
-
-#     return render(request, 'travel_destinations/destination_details.html',
-#                   {'destination_info': destination_info, })
 
 class DestinationDetail(View):
     """View recipe details"""
