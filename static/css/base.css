@@ -31,6 +31,7 @@ body {
 .navbar-bg {
     background-color: #74d7aea9;
 }
+
 .navbar-brand {
     font-family: 'Caveat', cursive;
     font-size: 36px;
@@ -48,6 +49,8 @@ body {
 .nav-link:hover {
     color: #8A2428;
 }
+
+
 
 /* Code for Nav Underline Hover from https://www.30secondsofcode.org/css/s/hover-underline-animation */
 
