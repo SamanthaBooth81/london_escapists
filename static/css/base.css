@@ -120,21 +120,6 @@ body {
     color: white;
 }
 
-.mailchimp-form-block {
-    width: 60%;
-    background-color: #6aedc88a;
-    padding: 25px 0 25px 0;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border: #0a906a 2px solid;
-}
-
-.signup-wave {
-    background-image: url('/media/signup-wave.png');
-    background-repeat: repeat;
-}
-
 #mc-header {
     font-family: 'Caveat', cursive;
 }
