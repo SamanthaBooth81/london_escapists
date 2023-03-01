@@ -8,6 +8,21 @@
     text-align: center;
 }
 
+/* ---------------------------------------------------------- Destination Title Anchor */
+
+.dest-title {
+    color: black;
+    font-weight: bold;
+    transition: transform .2s; /* Animation */
+    text-decoration: none;
+}
+
+.dest-title:hover {
+    color: #D66B6F;
+    transform: scale(1.1);
+}
+
+
 /* ----------------------------------------------- Carousel Styling */
 
 .carousel-style {
@@ -30,48 +45,6 @@
     background: #ffffff8d;
     border-radius: 15px;
 }
-
-/* Hover Animation from https://css-tricks.com/css-link-hover-effects/ */
-
-.carousel-header {
-    background-image: linear-gradient(
-      to right,
-      #2aa571,
-      #000 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    position: relative;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .carousel-header:before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .carousel-header:hover {
-   background-position: 0;
-  }
-  
-  .carousel-header:hover::before {
-    width:100%;
-  }
-
- .carousel-header h4,
- .carousel-caption p {
-    font-weight: 550;
-  }
 
 /* ---------------------------------------------------------- Destination Cards */
 .card {
@@ -96,21 +69,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-}
-
-.destination-link {
-    text-decoration: none;
-}
-
-.card-title {
-    color: black;
-    font-weight: bold;
-    transition: transform .2s; /* Animation */
-}
-
-.card-title:hover {
-    color: aquamarine;
-    transform: scale(1.2);
 }
 
 /* below code from https://stackdiary.com/gradient-hover-effect-css/ */

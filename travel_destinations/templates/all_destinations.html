@@ -35,10 +35,10 @@
                         <img src="/media/card-placeholder.png" class="d-block w-100 carousel-imgs" alt="Placeholder image">
                         {% endif %}
                         <div class="carousel-caption d-none d-md-block">
-                            <a href="#" class="carousel-header">
-                                <h4>{{ destinations.destination }}</h4>
+                            <a href="#" class="dest-title">
+                                <h4 class="dest-title">{{ destinations.destination }}</h4>
                             </a>
-                            <p>{{ destinations.destination_subheading }}</p>
+                            <!-- <p>{{ destinations.destination_subheading }}</p> -->
                         </div>
                     </div>
             {% endfor %}
@@ -65,8 +65,8 @@
                 <img src="{{ destinations.destination_image.url }}" class="card-img-top card-img" alt="{{ destinations.destination }}">
             </a>
             <div class="card-body">
-                <a href="{% url 'destination_details' destinations.slug %}" class="destination-link">
-                    <h5 class="card-title">{{ destinations.destination }}</h5>
+                <a href="{% url 'destination_details' destinations.slug %}" class="destination-link dest-title">
+                    <h5 class="dest-title">{{ destinations.destination }}</h5>
                 </a>
                 <p class="card-text">{{ destinations.destination_subheading }}</p>
                 <p class="card-text"><small>{{ destinations.created_on }}</small></p>
@@ -77,8 +77,8 @@
                 <img src="/media/card-placeholder.png" class="card-img-top card-img" alt="Placeholder image">
             </a>
             <div class="card-body">
-                <a href="{% url 'destination_details' destinations.slug %}" class="destination-link">
-                    <h5 class="card-title">{{ destinations.destination }}</h5>
+                <a href="{% url 'destination_details' destinations.slug %}" class="destination-link dest-title">
+                    <h5 class="dest-title">{{ destinations.destination }}</h5>
                 </a>
                 <p class="card-text">{{ destinations.destination_subheading }}</p>
                 <p class="card-text"><small>{{ destinations.created_on }}</small></p>
